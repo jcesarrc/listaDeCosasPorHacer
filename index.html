@@ -41,7 +41,7 @@
 	
 				<!-- El valor de $index se refiere a la posición del elemento en el array, así emparejamos el checkbox con el texto "tarea" -->
 
-				<input type="checkbox" id="{{$index}}" ng-checked="{{cosa.completada}}" ng-model="cosa_$index" ng-change="cambiarEstado($index)">
+				<input type="checkbox" id="{{$index}}" ng-checked="{{cosa.completada}}" ng-model="cosa_$index" ng-change="cambiarEstado(cosa)">
 
 				<!-- Ahora debemos apuntar a la propiedad "tarea" de cada objeto cosa para obtener el valor de texto que la representa -->
 				<label for="{{$index}}" ng-class="{'tachado': cosa.completada}">{{cosa.tarea}}</label>
