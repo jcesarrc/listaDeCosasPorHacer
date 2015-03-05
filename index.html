@@ -15,7 +15,6 @@
 	
 	<!-- {{5-3}}  Debería verse el número 2 como resultado en el navegador -->
 	
-	Usnaod
 	<h1>{{"Las Cosas Que Tengo Que Hacer" | uppercase}}</h1>
 
 	<div ng-controller="Controlador_Principal">
@@ -36,6 +35,7 @@
 
 
 		<ul>
+			<!-- Le indicamos a la directiva ng-repeat que queremos que filtre los elementos con base en el valor de "buscarCosa" -->
 			<li ng-repeat="cosa in listaDeCosas| filter:buscarCosa">
 				<!-- Usamos la directiva de Angular ng-checked para representar el estado de cada tarea, por eso la almacenamos como valor booleano (true o false). Así la caja se mostrará "checkeada" cuando el estado en el objeto de ListaDeCosas sea igual a true -->
 	
