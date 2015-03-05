@@ -23,11 +23,6 @@ angular
 				$scope.cosaNueva = "";
 			};
 
-
-			$scope.cambiarEstado = function(cosa){
-				//Simplemente invertimos en valor actual usando "!"
-				cosa.completada = !cosa.completada;
-			}
 		})
 		
 		//Filtro personalizado
