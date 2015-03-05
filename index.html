@@ -14,7 +14,8 @@
 <body>
 	
 	<!-- {{5-3}}  Debería verse el número 2 como resultado en el navegador -->
-
+	
+	Usnaod
 	<h1>{{"Las Cosas Que Tengo Que Hacer" | uppercase}}</h1>
 
 	<div ng-controller="Controlador_Principal">
@@ -23,11 +24,19 @@
 			<input type="submit" value="¡Agregar!">
 		</form>
 
-		<!-- Aplicamos el filtro personalizado sinCompletar -->
+		<!-- Aplicamos el filtro personalizado "sinCompletar" -->
 		<p>¡Me quedan {{listaDeCosas | sinCompletar }} cosas por hacer!</p>
+		
+
+		<!-- Filtro de búsqueda -->
+		<label for="filtroParaBuscar">Filtrar</label>
+		<input type="text" id="filtroParaBuscar" ng-model="buscarCosa" placeholder="Buscar Cosa...">
+		<button ng-click="buscarCosa = ''">Borrar Filtro</button>
+
+
 
 		<ul>
-			<li ng-repeat="cosa in listaDeCosas">
+			<li ng-repeat="cosa in listaDeCosas| filter:buscarCosa">
 				<!-- Usamos la directiva de Angular ng-checked para representar el estado de cada tarea, por eso la almacenamos como valor booleano (true o false). Así la caja se mostrará "checkeada" cuando el estado en el objeto de ListaDeCosas sea igual a true -->
 	
 				<!-- El valor de $index se refiere a la posición del elemento en el array, así emparejamos el checkbox con el texto "tarea" -->
