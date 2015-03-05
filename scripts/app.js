@@ -23,10 +23,4 @@ angular
 				$scope.cosaNueva = "";
 			};
 
-
-			$scope.cambiarEstado = function(index){
-				//Simplemente invertimos en valor actual usando "!"
-				$scope.listaDeCosas[index].completada = !$scope.listaDeCosas[index].completada;
-			}
-
 		})
