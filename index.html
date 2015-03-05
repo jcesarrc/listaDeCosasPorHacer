@@ -10,7 +10,11 @@
 	
 	<!-- {{5-3}}  Debería verse el número 2 como resultado en el navegador -->
 	<div ng-controller="Controlador_Principal">
-		{{listaDeCosas}}
+		<ul>
+			<li ng-repeat="cosa in listaDeCosas">
+				{{cosa}}
+			</li>
+		</ul>
 	</div>
 
 	<script src="./lib/angular.js"></script>
